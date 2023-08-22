@@ -23,7 +23,7 @@ KaoQin provides a user-friendly web interface accessible through the campus netw
 
 ## Getting Started
 
-To access the KaoQin Management System, open your web browser and navigate to the following URL: [http://10.20.7.127:5000](http://10.20.7.127:5000). Please log in using your student number as the login name and the last 6 digits of your ID card as the default password.
+To access the KaoQin Management System, open your web browser and navigate to the following URL: [http://cssus.suda.edu.cn/kaoqin](http://cssus.suda.edu.cn/kaoqin). Please log in using your student number as the login name and the last 6 digits of your ID card as the default password.
 
 ## Acknowledgments
 
@@ -31,13 +31,12 @@ To access the KaoQin Management System, open your web browser and navigate to th
 
 ## Bug Reports and Feature Requests
 
-If you encounter any issues or have specific feature requests, please [create an issue](https://github.com/Evlpsrfc/KaoQin/issues) on GitHub.
+If you encounter any issues or have specific feature requests, please [create an issue](https://github.com/Evlpsrfc/kaoqin/issues) on GitHub.
 
 ## Roadmap
 
 The development and maintenance of this project are shared responsibilities between myself and the members of the Graduate Student Union. Both parties have the authority to contribute to the ongoing development and maintenance of this code repository.
 I am committed to collaborating with the Graduate Student Union members and may actively participate in future maintenance and development tasks as needed. The project's continuity and evolution will depend on the mutual efforts and contributions of all involved parties.
-
 
 ## Contact Information
 
