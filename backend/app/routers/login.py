@@ -5,7 +5,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from starlette.status import HTTP_404_NOT_FOUND
 
-from .. import crud
+from .. import crud, schemas
 from ..core.security import create_access_token
 from ..models import User
 from ..deps import get_current_user, get_db
@@ -27,6 +27,6 @@ def login_access_token(db: Session = Depends(get_db), form_data: OAuth2PasswordR
     }
 
 
-@router.post("/login/test-token")
+@router.post("/login/test-token", response_model=schemas.User)
 def test_token(current_user: User = Depends(get_current_user)):
     return current_user
