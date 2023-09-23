@@ -265,7 +265,7 @@ if __name__ == "__main__":
         student_number = sheet.cell_value(i, 0)
         name = sheet.cell_value(i, 1).strip()
         check_time = sheet.cell_value(i, 10)
-        data.append((student_number, name))
+        data.append((student_number, name, check_time))
     data.sort(key=lambda x: x[2])
     workbook = Workbook()
     sheet = workbook.add_sheet("Sheet1")
