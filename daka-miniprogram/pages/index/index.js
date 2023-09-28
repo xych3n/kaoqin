@@ -25,6 +25,9 @@ Page({
 
     function discoverHandler(res) {
       const uidUint8Array = new Uint8Array(res.id);
+      if (uidUint8Array.length !== 4) {
+        return;
+      }
       const uidDigits = [];
       for (const byte of uidUint8Array) {
         uidDigits.push(byte.toString(16));
@@ -44,7 +47,10 @@ Page({
       that.setData({ records });
       wx.showToast({
         title: '打卡成功',
-      })
+      });
+      wx.vibrateShort({
+        type: 'heavy',
+      });
     }
 
     const nfc = wx.getNFCAdapter();
