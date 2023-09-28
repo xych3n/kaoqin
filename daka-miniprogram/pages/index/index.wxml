@@ -1,0 +1,11 @@
+<view>
+  <view class="container">
+    <button size="mini" type="primary" bind:tap="save">复制</button>
+    <button size="mini" type="default" bind:tap="clear">清空</button>
+  </view>
+  <t-cell-group bordered title="打卡记录">
+    <block wx:for="{{records}}" wx:for-index="index" wx:key="index">
+      <t-cell title="{{item.uid}}" description="{{item.time}}" />
+    </block>
+  </t-cell-group>
+</view>
