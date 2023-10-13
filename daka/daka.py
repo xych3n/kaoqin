@@ -101,7 +101,7 @@ if __name__ == "__main__":
         "Select": "查 询".encode("GB18030"),
     }
     r = s.post("http://222.192.16.12/page/Setting/ConferenceSet.aspx", data=data)
-    m = re.search(r'(?s)id="DataGrid1_ctl\d*_Linkbutton2".*?(\d\d\d\d-\d\d-\d\d)', r.text)
+    m = re.search(r'(?s)id="DataGrid1_ctl\d*_Linkbutton2".*?</td>.*?(\d\d\d\d-\d\d-\d\d)', r.text)
     if m is None:
         showerror("", "解析最近的一次活动失败")
         exit()
@@ -157,7 +157,7 @@ if __name__ == "__main__":
         showerror("", "解析插入会议结果失败")
         exit()
     if m.group(1) != "插入成功":
-        showerror("", "上传失败")
+        showerror("", "添加会议失败")
         exit()
     # upload temporary file
     r = s.get("http://222.192.16.12/page/Setting/conferenceWaterListImport.aspx")
