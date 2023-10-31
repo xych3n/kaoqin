@@ -30,7 +30,7 @@ Page({
       }
       const uidDigits = [];
       for (const byte of uidUint8Array) {
-        uidDigits.push(byte.toString(16));
+        uidDigits.push(byte.toString(16).padStart(2, '0'));
       }
       uidDigits.reverse();
       const uid = Number('0x' + uidDigits.join(''));
